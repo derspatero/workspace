@@ -29,12 +29,35 @@ public class MainActivity extends Activity {
         	public void onItemSelected(AdapterView parent, View view, int pos, long id) {
         		// Implement your logic here
                 TextView text1 = (TextView)findViewById(R.id.textView1);
-                TextView text2 = (TextView)findViewById(R.id.textView2);
-        		setTitle("Selected: " + parent.getItemAtPosition(pos).toString());
-        		setHoleScore(1, 1, Integer.parseInt(parent.getItemAtPosition(pos).toString()));
-        		text1.setText("Selected: " + String.valueOf(getTotalScore(0, 0)));
+                TextView text2 = (TextView)findViewById(R.id.textViewFront9_0);
+                TextView text3 = (TextView)findViewById(R.id.textViewFront9_1);
+                TextView text4 = (TextView)findViewById(R.id.textViewFront9_2);
+        		setTitle("player: 0 hole 0");
+        		setHoleScore(0, 0, Integer.parseInt(parent.getItemAtPosition(pos).toString()));
+        		text1.setText("Selected: " + String.valueOf(getHoleScore(0, 0)));
         		text2.setText(String.valueOf(getTotalScore(0, 0)));
-//        		text2.setText(getTotalScore(1, 0));
+        		text3.setText(String.valueOf(getTotalScore(1, 0)));
+        		text4.setText(String.valueOf(getTotalScore(2, 0)));
+
+        	}
+        	@Override
+        	public void onNothingSelected(AdapterView arg0) { }
+        });
+        Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
+        spinner5.setOnItemSelectedListener(new OnItemSelectedListener(){
+        	public void onItemSelected(AdapterView parent, View view, int pos, long id) {
+        		// Implement your logic here
+                TextView text1 = (TextView)findViewById(R.id.textView1);
+                TextView text2 = (TextView)findViewById(R.id.textViewFront9_0);
+                TextView text3 = (TextView)findViewById(R.id.textViewFront9_1);
+                TextView text4 = (TextView)findViewById(R.id.textViewFront9_2);
+        		setTitle("player: 0 hole: 1");
+        		setHoleScore(11, 0, Integer.parseInt(parent.getItemAtPosition(pos).toString()));
+        		text1.setText("Selected: " + String.valueOf(getHoleScore(11, 0)));
+        		text2.setText(String.valueOf(getTotalScore(0, 0)));
+        		text3.setText(String.valueOf(getTotalScore(1, 0)));
+        		text4.setText(String.valueOf(getTotalScore(2, 0)));
+
         	}
         	@Override
         	public void onNothingSelected(AdapterView arg0) { }
@@ -62,16 +85,9 @@ public class MainActivity extends Activity {
     }
     
 	void setHoleScore(int hole, int player, int score) {
-		holeScores[hole-1][player-1]=score;
+		holeScores[hole][player]=score;
 		calculateTotalScores();
-		
-		totalScores[2][player-1] += score;
-		if(hole<9) {
-			totalScores[0][player-1] += score;
-		}
-		else{
-			totalScores[1][player-1] += score;
-		}
+
 	}
 	
 	private void calculateTotalScores() {
@@ -95,7 +111,7 @@ public class MainActivity extends Activity {
 		return holeScores[hole][player];
 	}
 	
-	int getTotalScore(int player, int half){
+	int getTotalScore(int half, int player){
 		int total = 0;
 
 		if(half == 1){
