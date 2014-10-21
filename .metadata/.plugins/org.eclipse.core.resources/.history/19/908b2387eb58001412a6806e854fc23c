@@ -1,0 +1,108 @@
+package ca.bcit.comp2052.golfscorecard;
+
+import ca.bcit.comp2052.queenelizabethpitchandputt.R;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.AdapterView.OnItemSelectedListener;
+
+
+public class MainActivity extends Activity {
+
+	int[][] holeScores = new int[18][4];
+	int[][] totalScores = new int[3][4];
+	
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        initializeScoreCard();
+        Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
+        spinner1.setOnItemSelectedListener(new OnItemSelectedListener(){
+        	public void onItemSelected(AdapterView parent, View view, int pos, long id) {
+        		// Implement your logic here
+                TextView text1 = (TextView)findViewById(R.id.textView1);
+                TextView text2 = (TextView)findViewById(R.id.textView2);
+        		setTitle("Selected: " + parent.getItemAtPosition(pos).toString());
+        		text1.setText("Selected: " + parent.getItemAtPosition(pos).toString());
+
+        		        		setHoleScore(1, 1, Integer.parseInt(parent.getItemAtPosition(pos).toString()));
+        		text1.setText(getHoleScore(1, 1));
+//        		text2.setText(getTotalScore(1, 0));
+        	}
+        	@Override
+        	public void onNothingSelected(AdapterView arg0) { }
+        });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
+	void setHoleScore(int hole, int player, int score) {
+		holeScores[hole-1][player-1]=score;
+		totalScores[2][player-1] += score;
+		if(hole<9) {
+			totalScores[0][player-1] += score;
+		}
+		else{
+			totalScores[1][player-1] += score;
+		}
+	}
+	
+	int getHoleScore(int hole, int player) {
+		return holeScores[hole-1][player-1];
+	}
+	
+	int getTotalScore(int player, int half){
+		int total = 0;
+
+		if(half == 1){
+			total = totalScores[0][player-1];
+		}
+		if(half ==2 ){
+			total = totalScores[1][player-1];
+		}
+		else {
+			total = totalScores[2][player-1];
+		}
+		return total;
+	}
+	
+	void initializeScoreCard(){
+		for (int i = 0; i<18; i++) {
+			for (int j = 0; i<4; i++) {
+				holeScores[i][j] = 0;
+			}
+		}
+		for (int i = 0; i<3; i++) {
+			for (int j = 0; i<4; i++) {
+				totalScores[i][j] = 0;
+			}
+		}
+		
+	}
+}

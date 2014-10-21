@@ -1,0 +1,24 @@
+package ca.bcit.comp2052.queenelizabethpitchandputt;
+
+import android.app.Activity;
+
+public class ScoreCard extends Activity {
+	public int holeScores[][];
+	
+	public void setHoleScore(int hole, int player, int score) {
+		holeScores[hole-1][player-1]=score;
+	}
+	
+	public int getHoleScore(int hole, int player) {
+		return holeScores[hole-1][player-1];
+	}
+	
+	public int getTotalScore(int player, int hole){
+		int totalScore = 0;
+		for (int i=0; i<hole; i++){
+			totalScore += holeScores[i][player-1];
+		}
+		return totalScore;
+	}
+    
+}
