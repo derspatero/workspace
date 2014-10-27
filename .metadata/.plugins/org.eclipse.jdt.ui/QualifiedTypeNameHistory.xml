@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.widget.RadioButton"/>
 <fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="ca.bcit.comp2052.edwardlambke.R.id"/>
+<fullyQualifiedTypeName name="ca.bcit.comp2052.edwardlambke.R.layout"/>
+<fullyQualifiedTypeName name="ca.bcit.comp2052.edwardlambke.R.string"/>
 </qualifiedTypeNameHistroy>

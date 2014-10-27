@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;EdwardLambke&apos;&#x0A;- Original project: &apos;EdwardLambke&apos;&#x0A;- Original element: &apos;ca.bcit.comp2052.edwardlambke.MainActivity.PlaceholderFragment&apos;" description="Delete element" element1="/src&lt;ca.bcit.comp2052.edwardlambke{MainActivity.java[MainActivity[PlaceholderFragment" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1414262244305" subPackages="false" version="1.0"/>
+</session>

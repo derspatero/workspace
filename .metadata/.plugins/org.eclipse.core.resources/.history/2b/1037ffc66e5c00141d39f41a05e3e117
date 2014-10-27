@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Edward Lambke</string>
+    <string name="title_section1">Rating 1</string>
+    <string name="title_section2">Rating 2</string>
+    <string name="title_section3">Results</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

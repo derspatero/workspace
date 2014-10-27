@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Edward Lambke</string>
+    <string name="title_section1">Question 1</string>
+    <string name="title_section2">Question 2</string>
+    <string name="title_section3">Question 3</string>
+    <string name="title_section4">Question 4</string>
+    <string name="title_section5">Results</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button1_text">Show Results</string>
+    <string name="question1_text">What is 1 plus 2</string>
+    <string-array name="question1_choices">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+	<string name="question1_answer">3</string>
+    <string name="question2_text">What is 100 minus 99</string>
+    <string-array name="question2_choices">
+		<item>1</item>
+		<item>20</item>
+		<item>21</item>
+		<item>34</item>
+	</string-array>
+	<string name="question2_answer">1</string>
+    <string name="question3_text">What is 200 divided by 50</string>
+    <string-array name="question3_choices">
+		<item>4</item>
+		<item>8</item>
+		<item>16</item>
+		<item>32</item>
+	</string-array>
+	<string name="question3_answer">4</string>
+	<string name="question4_text">What is 3 times 1</string>
+    <string-array name="question4_choices">
+		<item>1</item>
+		<item>3</item>
+		<item>4</item>
+		<item>6</item>
+	</string-array>
+	<string name="question4_answer">3</string>
+
+</resources>

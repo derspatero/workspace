@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -24,6 +25,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         initializeScoreCard();
+        
+        EditText player0name = (EditText)findViewById(R.id.editText_player_0);
+        EditText player1name = (EditText)findViewById(R.id.editText_player_1);
+        EditText player2name = (EditText)findViewById(R.id.editText_player_2);
+        EditText player3name = (EditText)findViewById(R.id.editText_player_3);
         
 //      hole 0
         Spinner spinner00 = (Spinner) findViewById(R.id.spinner_hole_0_player_0);
@@ -814,10 +820,6 @@ public class MainActivity extends Activity {
 		holeScores[hole][player]=score;
 		calculateTotalScores();
 		updateScoreDisplay();
-
-		setTitle("player: " + player + " hole: " + hole);
-
-
 	}
 	
 	private void updateScoreDisplay() {

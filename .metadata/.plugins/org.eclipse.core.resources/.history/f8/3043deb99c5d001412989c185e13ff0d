@@ -1,0 +1,97 @@
+package ca.bcit.comp2052.edwardlambke;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.RatingBar.OnRatingBarChangeListener;
+
+public class RatingFragment extends Fragment {
+
+	private int fragmentNumber;
+	
+	public RatingFragment(int position) {
+		fragmentNumber = position;
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+		Bundle savedInstanceState) {
+
+		String[] buttonText;
+		String correctAnswer;
+		View fragmentView = inflater.inflate(R.layout.rating, container, false);
+		
+  	  	TextView text = (TextView) fragmentView.findViewById(R.id.TextView1);	  
+  	  	text.setText("FUCK!!");
+
+		RadioButton radioButton1 = (RadioButton) fragmentView.findViewById(R.id.radioButton1);
+		RadioButton radioButton2 = (RadioButton) fragmentView.findViewById(R.id.radioButton2);
+		RadioButton radioButton3 = (RadioButton) fragmentView.findViewById(R.id.radioButton3);
+		RadioButton radioButton4 = (RadioButton) fragmentView.findViewById(R.id.radioButton4);	
+		
+		if(fragmentNumber==0){
+			correctAnswer=getResources().getString(R.string.question1_answer);
+			text.setText(R.string.question1_text);
+			buttonText = getResources().getStringArray(R.array.question1_choices);
+			radioButton1.setText(buttonText[0]);
+			radioButton2.setText(buttonText[1]);
+			radioButton3.setText(buttonText[2]);
+			radioButton4.setText(buttonText[3]);
+		}
+		if(fragmentNumber==1){
+			correctAnswer=getResources().getString(R.string.question2_answer);
+			text.setText(R.string.question2_text);
+			buttonText = getResources().getStringArray(R.array.question2_choices);
+			radioButton1.setText(buttonText[0]);
+			radioButton2.setText(buttonText[1]);
+			radioButton3.setText(buttonText[2]);
+			radioButton4.setText(buttonText[3]);
+		}
+		if(fragmentNumber==2){
+			correctAnswer=getResources().getString(R.string.question3_answer);
+			text.setText(R.string.question3_text);
+			buttonText = getResources().getStringArray(R.array.question3_choices);
+			radioButton1.setText(buttonText[0]);
+			radioButton2.setText(buttonText[1]);
+			radioButton3.setText(buttonText[2]);
+			radioButton4.setText(buttonText[3]);
+		}
+		if(fragmentNumber==3){
+			correctAnswer=getResources().getString(R.string.question4_answer);
+			text.setText(R.string.question4_text);
+			buttonText = getResources().getStringArray(R.array.question4_choices);
+			radioButton1.setText(buttonText[0]);
+			radioButton2.setText(buttonText[1]);
+			radioButton3.setText(buttonText[2]);
+			radioButton4.setText(buttonText[3]);
+		}
+		
+//		radioButton1.setOnClickListener(radioListener);
+//		radioButton2.setOnClickListener(radioListener);
+//		radioButton3.setOnClickListener(radioListener);
+		
+		return fragmentView;
+	}
+	
+	private OnClickListener radioListener = new android.view.View.OnClickListener() {
+		public void onClick(View v) {
+			RadioButton rb = (RadioButton) v;
+//			
+//			RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup1);
+//			int rbIndex = rg.indexOfChild(
+//				findViewById(rg.getCheckedRadioButtonId())
+//			);
+//			
+//			setTitle("Selected: " + rb.getText());
+		}
+	};
+}

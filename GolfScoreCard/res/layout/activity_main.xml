@@ -30,6 +30,8 @@
                 android:id="@+id/editText_player_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="1"
                 android:ems="2" >
             </EditText>
             
@@ -37,6 +39,8 @@
                 android:id="@+id/editText_player_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="1"
                 android:ems="2" >
             </EditText>
             
@@ -44,6 +48,8 @@
                 android:id="@+id/editText_player_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="1"
                 android:ems="2" >
             </EditText>
             
@@ -51,6 +57,8 @@
                 android:id="@+id/editText_player_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="1"
                 android:ems="2" >
             </EditText>
             
@@ -75,6 +83,7 @@
                 android:id="@+id/spinner_hole_0_player_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:entries="@array/hole_score_array" />
             
             <Spinner
@@ -292,7 +301,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
            	
-                            	<TextView
+            <TextView
 	            android:id="@+id/textView_hole_6"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
@@ -404,41 +413,47 @@
     <TableRow
         android:id="@+id/tableRow11"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
+        
                 
        <TextView
             android:id="@+id/textViewFrontTotals"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
             android:text="F"
+            android:textColor="#FF0000"
             android:ems="1" />
         
         <TextView
             android:id="@+id/textViewFront9_0"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
         
         <TextView
             android:id="@+id/textViewFront9_1"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1"  />
                 
         <TextView
             android:id="@+id/textViewFront9_2"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
                         
         <TextView
             android:id="@+id/textViewFront9_3"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
                                 
 
@@ -801,41 +816,46 @@
     <TableRow
         android:id="@+id/tableRow21"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
            	
        <TextView
             android:id="@+id/textViewBackTotals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
+            android:textColor="#FF0000"
             android:ems="1" />
         
         <TextView
             android:id="@+id/textViewBack9_0"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
         
         <TextView
             android:id="@+id/textViewBack9_1"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1"  />
                 
         <TextView
             android:id="@+id/textViewBack9_2"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
                         
         <TextView
             android:id="@+id/textViewBack9_3"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
                                 
       
@@ -853,39 +873,44 @@
             android:id="@+id/textViewTotalTotals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="T"
+            android:text="T"         
+        	android:textColor="#FF0000"
             android:ems="1" />
         
         <TextView
             android:id="@+id/textViewTotal_0"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
         
         <TextView
             android:id="@+id/textViewTotal_1"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1"  />
                 
         <TextView
             android:id="@+id/textViewTotal_2"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
                         
         <TextView
             android:id="@+id/textViewTotal_3"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent" 
-    android:gravity="center"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent" 
+		    android:gravity="center"
+		    android:textColor="#FF0000"
             android:ems="1" />
                                 
         
-            </TableRow>
+</TableRow>
 
         
         
