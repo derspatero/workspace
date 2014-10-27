@@ -126,7 +126,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         	if(position == getCount() - 1){
         		return new ResultsFragment();
         	}
-        	return new QuestionFragment(position);
+        	return new RatingFragment(position);
         }
 
         @Override

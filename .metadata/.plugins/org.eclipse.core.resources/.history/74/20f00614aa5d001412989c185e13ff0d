@@ -2,10 +2,10 @@
 <resources>
 
     <string name="app_name">Edward Lambke</string>
-    <string name="title_section1">Question 1</string>
-    <string name="title_section2">Question 2</string>
-    <string name="title_section3">Question 3</string>
-    <string name="title_section4">Question 4</string>
+    <string name="title_section1">Question I</string>
+    <string name="title_section2">Question II</string>
+    <string name="title_section3">Question III</string>
+    <string name="title_section4">Question IV</string>
     <string name="title_section5">Results</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
